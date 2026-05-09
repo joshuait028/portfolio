@@ -49,8 +49,6 @@
 
 }
 
-/* RESET */
-
 *{
   margin:0;
   padding:0;
@@ -73,8 +71,6 @@ body{
 
 }
 
-/* BACKGROUND */
-
 body::before{
 
   content:'';
@@ -91,8 +87,6 @@ body::before{
   pointer-events:none;
 
 }
-
-/* NAVBAR */
 
 .navbar{
 
@@ -162,8 +156,6 @@ body::before{
 
 }
 
-/* WRAPPER */
-
 .about-wrapper{
 
   max-width:1200px;
@@ -176,8 +168,6 @@ body::before{
   z-index:2;
 
 }
-
-/* INTRO */
 
 .intro-section{
 
@@ -412,7 +402,6 @@ body::before{
 
 }
 
-
 .footer{
 
   border-top:1px solid var(--border);
@@ -428,7 +417,6 @@ body::before{
   background:#000000;
 
 }
-
 
 @keyframes fadeUp{
 
@@ -482,7 +470,6 @@ body::before{
   }
 
 }
-/* CONTACT SECTION */
 
 .contact-section{
 
