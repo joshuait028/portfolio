@@ -1,11 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joshua Roy Arrogante | Contact Me </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Joshua Roy Arrogante | Contact Me </title>
+
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+
+  <nav class="navbar" role="navigation">
+
+    <div class="navbar-brand">
+
+      <a class="navbar-item" href="index.html">
+        <img src="pictures/arrogante-website-logo.svg" alt="Logo">
+      </a>
+
+      <a role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarMenu">
+
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+
+      </a>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
+
+      <div class="navbar-start"></div>
+
+      <div class="navbar-end">
+
+        <a href="index.html" class="navbar-item">
+          Home
+        </a>
+
+        <a href="about-me.html" class="navbar-item">
+          About Me
+        </a>
+
+        <a href="certifications.html" class="navbar-item">
+          Certifications
+        </a>
+
+        <div class="navbar-item">
+          <a href="contact-me.html"
+          class="button is-primary">
+
+            <strong>Contact Me</strong>
+
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <main class="contact-section">
+
+    <p class="contact-label">
+      CONTACT ME
+    </p>
+
+    <h1 class="contact-title">
+      Get In Touch
+    </h1>
+
+    <p class="contact-text">
+      Feel free to reach out anytime. Whether you have
+      questions, or just want to connect — I'm always open to conversations
+      and opportunities to learn.
+    </p>
+
+    <div class="contact-links">
+
+      <a href="https://www.facebook.com/joshuaroy64/directory_links"
+      target="_blank"
+      class="contact-button">
+
+        Facebook
+
+      </a>
+
+      <a href="https://www.instagram.com/joshiedocchi/"
+      target="_blank"
+      class="contact-button">
+
+        Instagram
+
+      </a>
+
+      <a href="https://www.linkedin.com/in/joshua-tolentino-22a031354/"
+      target="_blank"
+      class="contact-button">
+
+        LinkedIn
+
+      </a>
+
+      <a href="mailto:tolentinojoshua028l@gmail.com"
+      class="contact-button">
+
+        Email
+
+      </a>
+
+    </div>
+
+  </main>
+
+  
+  <footer class="footer">
+    © 2026 • Joshua Roy Arrogante | All rights reserved.
+  </footer>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const $navbarBurgers = Array.prototype.slice.call(
+        document.querySelectorAll('.navbar-burger'),
+        0
+      );
+
+      $navbarBurgers.forEach(el => {
+
+        el.addEventListener('click', () => {
+
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+
+        });
+
+      });
+
+    });
+
+  </script>
+
 </body>
 </html>
