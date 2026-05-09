@@ -1,49 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Joshua Roy Arrogante | Web Portfolio</title>
-        <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
-    >
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-       <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="#">
-        <img src="pictures/arrogante-website-logo.svg" alt="Logo" style="max-height: 60px;">
-    </a>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+<head>
 
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start"></div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="navbar-end">
+  <title>Joshua Roy Arrogante | Web Portfolio</title>
 
-    <a class="navbar-item" href="index.html">Home</a>
-    <a class="navbar-item" href="about-me.html">About Me</a>
-    <a class="navbar-item" href="certifications.html">Certifications</a>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 
-    <div class="navbar-item">
-    <a class="button is-primary" href="contact-me.html">
-      <strong>Contact Me</strong>
-    </a>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation">
+
+    <div class="navbar-brand">
+
+      <a class="navbar-item" href="index.html">
+
+        <img src="pictures/arrogante-website-logo.svg"
+        alt="Logo"
+        style="max-height: 60px;">
+
+      </a>
+
+      <a role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasicExample">
+
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+
+      </a>
+
     </div>
 
-</div>
-</nav>
+    <div id="navbarBasicExample"
+    class="navbar-menu">
+
+      <div class="navbar-start"></div>
+
+      <div class="navbar-end">
+
+        <a class="navbar-item active-link" href="index.html"> Home </a>
+
+        <a class="navbar-item" href="about-me.html"> About Me </a>
+
+        <a class="navbar-item" href="certifications.html">Certifications</a>
+
+        <div class="navbar-item">
+
+          <a class="button is-primary" href="contact-me.html"> <strong>Contact Me</strong>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <main class="home-section">
+
+    <div class="profile-container">
+
+      <img src="pictures/arrogante-website-profile.png"
+      alt="Joshua Picture"
+      class="profile-image">
+
+    </div>
+
+    <h1 class="home-title"> Joshua Roy Arrogante </h1>
+
+    <p class="home-text"> An Aspiring IT professional. </p>
+
+    <div class="home-buttons">
+
+      <a href="about-me.html" class="home-button"> About Me </a>
+
+      <a href="tech-stack.html" class="home-button"> Tech Stack </a>
+
+      <a href="certifications.html" class="home-button">Certifications
+
+      </a>
+
+      <a href="contact-me.html" class="home-button"> Contact Me </a>
+
+    </div>
+
+  </main>
+  
+  <footer class="footer">
+
+    © 2026 Joshua Arrogante • All rights reserved.
+
+  </footer>
 
   <script>
+
     document.addEventListener('DOMContentLoaded', () => {
 
       const $navbarBurgers = Array.prototype.slice.call(
@@ -52,6 +121,7 @@
       );
 
       $navbarBurgers.forEach(el => {
+
         el.addEventListener('click', () => {
 
           const target = el.dataset.target;
@@ -61,9 +131,12 @@
           $target.classList.toggle('is-active');
 
         });
+
       });
 
     });
-    </script>
-    </body>
+
+  </script>
+
+</body>
 </html>
