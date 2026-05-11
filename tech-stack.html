@@ -71,7 +71,7 @@
 
   <main class="tech">
 
-    <h1>TechStack</h1>
+    <h1>Tech-Stack</h1>
 
     <p class="tech-text"> I use different programming languages and tools to build websites,
       systems, and practice software development. These are the technologies I am currently learning and working with. </p>
@@ -113,34 +113,7 @@
 
   <footer class="footer">Joshua Arrogante • @ 2026 </footer>
 
-  <script>
-
-    document.addEventListener('DOMContentLoaded', () => {
-
-      const $navbarBurgers = Array.prototype.slice.call(
-        document.querySelectorAll('.navbar-burger'),
-        0
-      );
-
-      $navbarBurgers.forEach(el => {
-
-        el.addEventListener('click', () => {
-
-          const target = el.dataset.target;
-
-          const $target = document.getElementById(target);
-
-          el.classList.toggle('is-active');
-
-          $target.classList.toggle('is-active');
-
-        });
-
-      });
-
-    });
-
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
