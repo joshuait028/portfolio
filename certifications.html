@@ -55,7 +55,7 @@
 
         <a href="about-me.html" class="navbar-item">About</a>
 
-        <a href="certifications.html" class="navbar-item">Certifications</a>
+        <a href="certifications.html" class="navbar-item active-link">Certifications</a>
 
         <a href="tech-stack.html" class="navbar-item">Tech Stack</a>
 
@@ -100,7 +100,9 @@
           Microsoft Word Certificate
         </p>
 
-        <a href="" target="_blank">
+        <a href=""
+        target="_blank"
+        class="cert-link">
           View Certificate Proof
         </a>
 
@@ -117,7 +119,9 @@
           Java Programming Certificate
         </p>
 
-        <a href="" target="_blank">
+        <a href=""
+        target="_blank"
+        class="cert-link">
           View Certificate Proof
         </a>
 
@@ -126,9 +130,11 @@
     </div>
 
   </main>
+
   <div id="popup">
 
-    <span onclick="closeImage()">X</span>
+    <span class="close-btn"
+    onclick="closeImage()">×</span>
 
     <img id="popup-img">
 
@@ -140,9 +146,34 @@
 
   <script>
 
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const $navbarBurgers = Array.prototype.slice.call(
+        document.querySelectorAll('.navbar-burger'),
+        0
+      );
+
+      $navbarBurgers.forEach(el => {
+
+        el.addEventListener('click', () => {
+
+          const target = el.dataset.target;
+
+          const $target = document.getElementById(target);
+
+          el.classList.toggle('is-active');
+
+          $target.classList.toggle('is-active');
+
+        });
+
+      });
+
+    });
+
     function openImage(src) {
 
-      document.getElementById("popup").style.display = "block";
+      document.getElementById("popup").style.display = "flex";
 
       document.getElementById("popup-img").src = src;
 
