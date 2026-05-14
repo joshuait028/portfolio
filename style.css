@@ -1272,7 +1272,7 @@ body.fade-out{
 
 .tech-desc{
 
-  color:#888;
+  color:#ffffff;
 
   max-width:700px;
 
@@ -1333,6 +1333,9 @@ body.fade-out{
   font-size:14px;
 
 }
+
+.tech-text{
+  margin-bottom: 30px;}
 
 .footer{
 
