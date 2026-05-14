@@ -1,191 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Roy Arrogante | Certifications</title>
 
-  <meta charset="UTF-8">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Joshua Roy Arrogante | Certifications</title>
-
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-
-  <link rel="stylesheet" href="style.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <nav class="navbar" role="navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="pictures/arrogante-website-logo.svg" alt="Logo">
+            </a>
 
-  <nav class="navbar" role="navigation">
+            <a role="button"
+                class="navbar-burger"
+                aria-label="menu"
+                aria-expanded="false"
+                data-target="navbarMenu">
 
-    <div class="navbar-brand">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
 
-      <a class="navbar-item" href="index.html">
-        <img src="pictures/arrogante-website-logo.svg" alt="Logo">
-      </a>
-
-      <a role="button"
-      class="navbar-burger"
-      aria-label="menu"
-      aria-expanded="false"
-      data-target="navbarMenu">
-
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </a>
-
-    </div>
-
-    <div id="navbarMenu" class="navbar-menu">
-
-      <div class="navbar-start"></div>
-
-      <div class="navbar-end">
-
-        <a href="index.html" class="navbar-item">Home</a>
-
-        <a href="about-me.html" class="navbar-item">About</a>
-
-        <a href="certifications.html" class="navbar-item active-link">Certifications</a>
-
-        <a href="tech-stack.html" class="navbar-item">Tech Stack</a>
-
-        <div class="navbar-item">
-
-          <a href="contact-me.html"
-          class="button is-primary">
-
-            <strong>Contact</strong>
-
-          </a>
-
+            </a>
         </div>
 
-      </div>
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-start"></div>
 
-    </div>
+            <div class="navbar-end">
+                <a href="index.html" class="navbar-item">Home</a>
 
-  </nav>
+                <a href="about-me.html" class="navbar-item">About</a>
 
-  <main class="cert-section">
+                <a href="certifications.html"
+                    class="navbar-item active-link">
+                    Certifications
+                </a>
 
-    <p class="cert-label">CERTIFICATIONS</p>
+                <a href="tech-stack.html" class="navbar-item">
+                    Tech Stack
+                </a>
 
-    <h1 class="cert-title">My Certificates</h1>
+                <div class="navbar-item">
+                    <a href="contact-me.html"
+                        class="button is-primary">
 
-    <p class="cert-text">
-      These are some of the certifications and achievements
-      I earned while learning technology and programming.
-    </p>
+                        <strong>Contact</strong>
 
-    <div class="cert-grid">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-      <div class="cert-card">
+    <main class="cert-section">
+        <p class="cert-label">CERTIFICATIONS</p>
 
-        <img src="pictures/arrogante-word-cert.png"
-        alt="Word Certificate"
-        class="cert-img"
-        onclick="openImage(this.src)">
+        <h1 class="cert-title">My Certificates</h1>
 
-        <p class="cert-name">
-          Microsoft Word Certificate
+        <p class="cert-text">
+            These are some of the certifications and achievements
+            I earned while learning technology and programming.
         </p>
 
-        <a href=""
-        target="_blank"
-        class="cert-link">
-          View Certificate Proof
-        </a>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <img src="pictures/arrogante-word-cert.png"
+                    alt="Word Certificate"
+                    class="cert-img"
+                    onclick="openImage(this.src)">
 
-      </div>
+                <p class="cert-name">
+                    Microsoft Word Certificate
+                </p>
 
-      <div class="cert-card">
+                <a href=""
+                    target="_blank"
+                    class="cert-link">
+                    View Certificate Proof
+                </a>
+            </div>
 
-        <img src="pictures/arrogante-java-cert.png"
-        alt="Java Certificate"
-        class="cert-img"
-        onclick="openImage(this.src)">
+            <div class="cert-card">
+                <img src="pictures/arrogante-java-cert.png"
+                    alt="Java Certificate"
+                    class="cert-img"
+                    onclick="openImage(this.src)">
 
-        <p class="cert-name">
-          Java Programming Certificate
-        </p>
+                <p class="cert-name">
+                    Java Programming Certificate
+                </p>
 
-        <a href=""
-        target="_blank"
-        class="cert-link">
-          View Certificate Proof
-        </a>
+                <a href=""
+                    target="_blank"
+                    class="cert-link">
+                    View Certificate Proof
+                </a>
+            </div>
+        </div>
+    </main>
 
-      </div>
+    <div id="popup">
+        <span class="close-btn"
+            onclick="closeImage()">×</span>
 
+        <img id="popup-img">
     </div>
 
-  </main>
+    <footer class="footer">
+        Joshua Roy Arrogante • © 2026
+    </footer>
 
-  <div id="popup">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
 
-    <span class="close-btn"
-    onclick="closeImage()">×</span>
+            const $navbarBurgers = Array.prototype.slice.call(
+                document.querySelectorAll('.navbar-burger'),
+                0
+            );
 
-    <img id="popup-img">
+            $navbarBurgers.forEach(el => {
 
-  </div>
+                el.addEventListener('click', () => {
 
-  <footer class="footer">
-    Joshua Roy Arrogante • © 2026
-  </footer>
+                    const target = el.dataset.target;
 
-  <script>
+                    const $target = document.getElementById(target);
 
-    document.addEventListener('DOMContentLoaded', () => {
+                    el.classList.toggle('is-active');
 
-      const $navbarBurgers = Array.prototype.slice.call(
-        document.querySelectorAll('.navbar-burger'),
-        0
-      );
+                    $target.classList.toggle('is-active');
 
-      $navbarBurgers.forEach(el => {
+                });
 
-        el.addEventListener('click', () => {
-
-          const target = el.dataset.target;
-
-          const $target = document.getElementById(target);
-
-          el.classList.toggle('is-active');
-
-          $target.classList.toggle('is-active');
+            });
 
         });
 
-      });
+        function openImage(src) {
 
-    });
+            document.getElementById("popup").style.display = "flex";
 
-    function openImage(src) {
+            document.getElementById("popup-img").src = src;
 
-      document.getElementById("popup").style.display = "flex";
+        }
 
-      document.getElementById("popup-img").src = src;
+        function closeImage() {
 
-    }
+            document.getElementById("popup").style.display = "none";
 
-    function closeImage() {
-
-      document.getElementById("popup").style.display = "none";
-
-    }
-
-  </script>
-
+        }
+    </script>
 </body>
 </html>
