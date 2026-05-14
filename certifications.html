@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
     <title>Joshua Roy Arrogante | Certifications</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="style.css">
 </head>
 
 <body>
+
     <nav class="navbar" role="navigation">
+
         <div class="navbar-brand">
+
             <a class="navbar-item" href="index.html">
-                <img src="pictures/arrogante-website-logo.svg" alt="Logo">
+                <img src="pictures/arrogante-website-logo.svg"
+                    alt="Logo">
             </a>
 
             <a role="button"
@@ -32,41 +47,61 @@
                 <span></span>
 
             </a>
+
         </div>
 
         <div id="navbarMenu" class="navbar-menu">
+
             <div class="navbar-start"></div>
 
             <div class="navbar-end">
-                <a href="index.html" class="navbar-item">Home</a>
 
-                <a href="about-me.html" class="navbar-item">About</a>
+                <a href="index.html"
+                    class="navbar-item">
+                    Home
+                </a>
+
+                <a href="about-me.html"
+                    class="navbar-item">
+                    About
+                </a>
 
                 <a href="certifications.html"
                     class="navbar-item active-link">
                     Certifications
                 </a>
 
-                <a href="tech-stack.html" class="navbar-item">
+                <a href="tech-stack.html"
+                    class="navbar-item">
                     Tech Stack
                 </a>
 
                 <div class="navbar-item">
+
                     <a href="contact-me.html"
                         class="button is-primary">
 
                         <strong>Contact</strong>
 
                     </a>
+
                 </div>
+
             </div>
+
         </div>
+
     </nav>
 
     <main class="cert-section">
-        <p class="cert-label">CERTIFICATIONS</p>
 
-        <h1 class="cert-title">My Certificates</h1>
+        <p class="cert-label">
+            CERTIFICATIONS
+        </p>
+
+        <h1 class="cert-title">
+            My Certificates
+        </h1>
 
         <p class="cert-text">
             These are some of the certifications and achievements
@@ -74,11 +109,14 @@
         </p>
 
         <div class="cert-grid">
+
+            <!-- Certificate 1 -->
             <div class="cert-card">
+
                 <img src="pictures/arrogante-word-cert.png"
                     alt="Word Certificate"
                     class="cert-img"
-                    onclick="openImage(this.src)">
+                    onclick="openLightbox('pictures/arrogante-word-cert.png', 'Word MS')">
 
                 <p class="cert-name">
                     Microsoft Word Certificate
@@ -87,15 +125,20 @@
                 <a href="https://www.certiport.com/portal/pages/credentialverification.aspx"
                     target="_blank"
                     class="cert-link">
+
                     Verify Certificate Proof
+
                 </a>
+
             </div>
 
+            <!-- Certificate 2 -->
             <div class="cert-card">
+
                 <img src="pictures/arrogante-java-cert.png"
                     alt="Java Certificate"
                     class="cert-img"
-                    onclick="openImage(this.src)">
+                    onclick="openLightbox('pictures/arrogante-java-cert.png', 'Java Programming')">
 
                 <p class="cert-name">
                     Java Programming Certificate
@@ -104,24 +147,45 @@
                 <a href="https://www.certiport.com/portal/pages/credentialverification.aspx"
                     target="_blank"
                     class="cert-link">
-                   Verify Certificate Proof
+
+                    Verify Certificate Proof
+
                 </a>
+
             </div>
+
+            <!-- Certificate 3 -->
+            <div class="cert-card">
+
+                <img src="pictures/arrogante-certification-saylor-modern-database.jpg"
+                    alt="Modern Database Certificate"
+                    class="cert-img"
+                    onclick="openLightbox('pictures/arrogante-certification-saylor-modern-database.jpg', 'Modern Database Programming')">
+
+                <p class="cert-name">
+                    Modern Database Certif9icate
+                </p>
+
+                <a href="https://learn.saylor.org/admin/tool/certificate/index.php"
+                    target="_blank"
+                    class="cert-link">
+
+                    Verify Certificate Proof
+
+                </a>
+
+            </div>
+
         </div>
+
     </main>
-
-    <div id="popup">
-        <span class="close-btn"
-            onclick="closeImage()">×</span>
-
-        <img id="popup-img">
-    </div>
 
     <footer class="footer">
         Joshua Roy Arrogante • © 2026
     </footer>
 
     <script>
+
         document.addEventListener('DOMContentLoaded', () => {
 
             const $navbarBurgers = Array.prototype.slice.call(
@@ -147,19 +211,80 @@
 
         });
 
-        function openImage(src) {
-
-            document.getElementById("popup").style.display = "flex";
-
-            document.getElementById("popup-img").src = src;
-
-        }
-
-        function closeImage() {
-
-            document.getElementById("popup").style.display = "none";
-
-        }
     </script>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox"
+        id="lightbox"
+        onclick="closeLightbox()">
+
+        <div class="lightbox-content"
+            onclick="event.stopPropagation()">
+
+            <button class="lightbox-close"
+                onclick="closeLightbox()">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+            <img src=""
+                alt=""
+                id="lightbox-img">
+
+            <p id="lightbox-title"></p>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+
+        function toggleMenu() {
+            document.getElementById('navLinks')
+                .classList.toggle('open');
+        }
+
+        function openLightbox(src, title) {
+
+            document.getElementById('lightbox-img').src = src;
+
+            document.getElementById('lightbox-title').textContent = title;
+
+            document.getElementById('lightbox')
+                .classList.add('active');
+
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'info',
+                title: `Viewing: ${title}`,
+                showConfirmButton: false,
+                timer: 1500,
+                timerProgressBar: true,
+            });
+
+        }
+
+        function closeLightbox() {
+
+            document.getElementById('lightbox')
+                .classList.remove('active');
+
+        }
+
+        document.addEventListener('keydown', function(e) {
+
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+
+        });
+
+    </script>
+
 </body>
+
 </html>

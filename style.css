@@ -171,9 +171,9 @@ body.fade-out{
 }
 
 .main-title{
+  font-size:55px;
   font-family:'Syne', sans-serif;
-  font-size:70px;
-  font-weight:700;
+  margin-bottom:20px;
 }
 
 .intro-text{
@@ -346,8 +346,8 @@ body.fade-out{
 
 /* CERT */
 .cert-section{
+  padding:80px 24px;
   max-width:1200px;
-  padding:60px 24px;
   margin:auto;
   text-align:center;
 }
@@ -424,3 +424,49 @@ body.fade-out{
     font-size:40px;
   }
 }
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox img {
+    width: 100%;
+    max-width: 800px;
+    max-height: 80vh;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10; /* ADD THIS */
+}
+
+.lightbox-close i {
+    color: black;
